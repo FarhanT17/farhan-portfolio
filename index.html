@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farhan Tariq | SOC Analyst Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="apple-touch-icon" href="./images/favicon.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            color: #2c3e50;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #3498db;
+            border-radius: 2px;
+        }
+        
+        .section-title {
+            color: #2c3e50;
+            margin-bottom: 50px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #3498db;
+            color: #3498db;
+        }
+        
+        .btn-outline:hover {
+            background: #3498db;
+            color: white;
+        }
+        
+        .btn-sm {
+            padding: 6px 16px;
+            font-size: 0.85rem;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: #3498db;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            position: relative;
+            padding: 5px 0;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #3498db;
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #2c3e50;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding-top: 120px;
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(41, 128, 185, 0.1) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .subheading {
+            font-size: 1.2rem;
+            color: #3498db;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .hero h1 span {
+            color: #3498db;
+        }
+        
+        .hero h2 {
+            font-size: 1.8rem;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        
+        .role-target {
+            background: rgba(52, 152, 219, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 25px auto;
+            max-width: 600px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .role-target p {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .hero-buttons {
+            margin-top: 30px;
+        }
+        
+        /* About Section */
+        .about-content {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .about-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-item i {
+            color: #3498db;
+            font-size: 1.2rem;
+        }
+        
+        .counter {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .counter-item {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        
+        .counter-item h3 {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+        
+        .counter-item p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+        
+        /* Skills Section */
+        .skills-wrapper {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .skills-group {
+            margin-bottom: 35px;
+        }
+        
+        .skills-group:last-child {
+            margin-bottom: 0;
+        }
+        
+        .skills-group h3 {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        
+        .skills-group h3 i {
+            color: #3498db;
+        }
+        
+        .skills-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .skill-badge {
+            background: #f8f9fa;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-left: 3px solid #3498db;
+        }
+        
+        .skill-highlight {
+            background: #e3f2fd;
+            color: #3498db;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .tools-compact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .tool-tag {
+            background: #f8f9fa;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border-left: 3px solid #3498db;
+        }
+        
+        .tool-tag i {
+            color: #3498db;
+            font-size: 0.8rem;
+        }
+        
+        .tool-experience {
+            color: #666;
+            font-size: 0.8rem;
+            background: #e3f2fd;
+            padding: 2px 8px;
+            border-radius: 12px;
+        }
+        
+        .soft-skills-compact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .soft-skill-item {
+            background: #e8f5e9;
+            color: #388e3c;
+            padding: 6px 16px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .project-img {
+            height: 180px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .project-content {
+            padding: 25px;
+        }
+        
+        .project-header {
+            margin-bottom: 15px;
+        }
+        
+        .project-header h3 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 1.3rem;
+        }
+        
+        .project-role {
+            color: #3498db;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .project-description {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .project-achievements {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .project-achievements li {
+            margin-bottom: 8px;
+            color: #555;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+        
+        .tag {
+            background: #e3f2fd;
+            color: #3498db;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .project-links a {
+            padding: 8px 20px;
+            font-size: 0.85rem;
+        }
+        
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: #3498db;
+        }
+        
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+            width: 50%;
+            padding: 20px;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .timeline-content:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: #3498db;
+            border-radius: 50%;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content:before {
+            right: -30px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content:before {
+            left: -30px;
+        }
+        
+        .timeline-date {
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .timeline-content h3 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-content h4 {
+            color: #666;
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        /* Freelance Section - REFINED */
+        .freelance-section {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .freelance-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        
+        .freelance-header h3 {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .freelance-header h3 i {
+            color: #3498db;
+        }
+        
+        .freelance-date {
+            color: #3498db;
+            font-weight: 600;
+            font-size: 1rem;
+            background: #e3f2fd;
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+        
+        .freelance-sub {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .freelance-stats {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            background: #f8f9fa;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .freelance-achievements {
+            margin: 20px 0 25px 20px;
+        }
+        
+        .freelance-achievements li {
+            margin-bottom: 12px;
+            color: #555;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .freelance-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        /* Certifications Section */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .cert-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid #3498db;
+        }
+        
+        .cert-card h3 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .cert-card p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .cert-badge {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #3498db;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        
+        /* Achievements Section */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .achievement-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .achievement-card i {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        
+        .achievement-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .achievement-card p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        /* Publications List */
+        .publications-list {
+            margin-top: 20px;
+            padding-left: 0;
+            list-style: none;
+            text-align: left;
+        }
+        
+        .publications-list li {
+            margin-bottom: 12px;
+            color: #555;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 20px;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+        
+        .publications-list li:before {
+            content: '•';
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: #3498db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-item a {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-item a:hover {
+            color: #3498db;
+            text-decoration: underline;
+        }
+        
+        .contact-item p {
+            margin: 0;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section p {
+            color: #bdc3c7;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+        
+        .footer-links a:hover {
+            color: #3498db;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: #3498db;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px;
+                transition: left 0.3s;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.4rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .timeline:before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 0;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-content:before {
+                left: -40px !important;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-badges, .tools-compact {
+                gap: 8px;
+            }
+            
+            .freelance-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .project-links {
+                flex-direction: column;
+            }
+            
+            .hero p {
+                font-size: 0.95rem;
+            }
+            
+            .skill-badge, .tool-tag {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="#home" class="logo">Farhan<span>Tariq</span></a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#freelance">Freelance</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <span class="subheading">Hello!</span>
+                <h1>I'm <span>Farhan Tariq</span></h1>
+                <h2>SOC Analyst | Threat Detection | MSc Cyber Security</h2>
+                <p>SOC-focused Cyber Security professional with 65+ hands-on SOC labs and a distinction-level MSc dissertation on real-time phishing detection using machine learning. Skilled in alert triage, threat detection, and SOC operations.</p>
+                
+                <div class="role-target">
+                    <p><strong>Actively seeking:</strong> Junior SOC Analyst or Cyber Security Analyst roles in the UK. Open to graduate and junior roles, including remote opportunities.</p>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn">View Projects</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <h3>Personal Details</h3>
+                <div class="about-info">
+                    <div class="info-item">
+                        <i class="fas fa-user"></i>
+                        <span><strong>Name:</strong> Farhan Tariq</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span><strong>Email:</strong> Farhantariq5251@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span><strong>Phone:</strong> +44 7466024941</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span><strong>Address:</strong> London, UK</span>
+                    </div>
+                </div>
+                
+                <p>MSc Cyber Security graduate specializing in SOC operations, threat detection, and phishing analysis. Experienced in alert triage, SIEM log analysis, and building ML-based detection systems through 65+ hands-on SOC labs. Seeking to contribute in a real-world SOC environment.</p>
+                
+                <div class="counter">
+                    <div class="counter-item">
+                        <h3>65+</h3>
+                        <p>SOC Labs Completed</p>
+                    </div>
+                    <div class="counter-item">
+                        <h3>3</h3>
+                        <p>Detection Models</p>
+                    </div>
+                    <div class="counter-item">
+                        <h3>15+</h3>
+                        <p>Client Projects</p>
+                    </div>
+                    <div class="counter-item">
+                        <h3>10+</h3>
+                        <p>Certifications</p>
+                    </div>
+                </div>
+                <p style="margin-top: 20px; font-weight: 500; color: #3498db;"><i class="fas fa-shield-alt"></i> Hands-on SOC & Threat Analysis Experience</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-wrapper">
+                <!-- Programming & Development -->
+                <div class="skills-group">
+                    <h3><i class="fas fa-code"></i> Programming & Development</h3>
+                    <div class="skills-badges">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">JavaScript / React Native / React Js</span>
+                        <span class="skill-badge">Java / C++</span>
+                        <span class="skill-badge">HTML / CSS</span>
+                    </div>
+                </div>
+                
+                <!-- Cybersecurity & IT -->
+                <div class="skills-group">
+                    <h3><i class="fas fa-shield-alt"></i> Cybersecurity & IT</h3>
+                    <div class="skills-badges">
+                        <span class="skill-badge">Cyber Security Fundamentals</span>
+                        <span class="skill-badge">SOC & Incident Response</span>
+                        <span class="skill-badge">Networking <span class="skill-highlight">CCNA In Progress</span></span>
+                        <span class="skill-badge">API Security & Data Handling</span>
+                        <span class="skill-badge">Threat Analysis</span>
+                        <span class="skill-badge">SIEM Log Analysis</span>
+                        <span class="skill-badge">MITRE ATT&CK</span>
+                    </div>
+                </div>
+                
+                <!-- Tools & Platforms -->
+                <div class="skills-group">
+                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                    <div class="tools-compact">
+                        <span class="tool-tag"><i class="fas fa-network-wired"></i> Wireshark <span class="tool-experience">Network Analysis</span></span>
+                        <span class="tool-tag"><i class="fas fa-search"></i> Nmap <span class="tool-experience">Network Scanning</span></span>
+                        <span class="tool-tag"><i class="fas fa-chart-line"></i> Splunk <span class="tool-experience">SIEM Log Analysis</span></span>
+                        <span class="tool-tag"><i class="fas fa-virus"></i> VirusTotal <span class="tool-experience">Threat Intelligence</span></span>
+                        <span class="tool-tag"><i class="fas fa-bug"></i> Burp Suite <span class="tool-experience">Web App Testing</span></span>
+                        <span class="tool-tag"><i class="fas fa-bolt"></i> FastAPI <span class="tool-experience">Built ML Pipeline</span></span>
+                        <span class="tool-tag"><i class="fas fa-brain"></i> DistilBERT <span class="tool-experience">Phishing Detection Model</span></span>
+                        <span class="tool-tag"><i class="fas fa-database"></i> Firebase <span class="tool-experience">Backend & Auth</span></span>
+                        <span class="tool-tag"><i class="fab fa-github"></i> GitHub <span class="tool-experience">Version Control</span></span>
+                        <span class="tool-tag"><i class="fab fa-linux"></i> Linux <span class="tool-experience">Command Line</span></span>
+                    </div>
+                </div>
+                
+                <!-- Learning & Labs -->
+                <div class="skills-group">
+                    <h3><i class="fas fa-graduation-cap"></i> Learning & Labs</h3>
+                    <div class="skills-badges">
+                        <span class="skill-badge">TryHackMe <span class="skill-highlight">65+ SOC Labs</span></span>
+                    </div>
+                </div>
+                
+                <!-- Soft Skills -->
+                <div class="skills-group">
+                    <h3><i class="fas fa-users"></i> Soft Skills</h3>
+                    <div class="soft-skills-compact">
+                        <span class="soft-skill-item">Incident Reporting</span>
+                        <span class="soft-skill-item">Documentation</span>
+                        <span class="soft-skill-item">Team Collaboration</span>
+                        <span class="soft-skill-item">Time Management</span>
+                        <span class="soft-skill-item">Problem Solving</span>
+                        <span class="soft-skill-item">Communication</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- SOC Level 1 - TryHackMe -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>SOC Level 1 – TryHackMe</h3>
+                            <div class="project-role">SOC Analyst Portfolio</div>
+                        </div>
+                        <p class="project-description">Hands-on SOC labs documenting incident response, alert triage, SIEM log analysis, phishing and malware investigation, and threat intelligence workflows.</p>
+                        
+                        <ul class="project-achievements">
+                            <li>65+ SOC labs completed with real-world scenarios</li>
+                            <li>Documented investigations and response playbooks</li>
+                            <li>MITRE ATT&CK framework mapping</li>
+                            <li>SIEM analysis with Splunk and Wireshark</li>
+                        </ul>
+                        
+                        <div class="project-tags">
+                            <span class="tag">SOC Operations</span>
+                            <span class="tag">Incident Response</span>
+                            <span class="tag">SIEM</span>
+                            <span class="tag">Threat Analysis</span>
+                            <span class="tag">MITRE ATT&CK</span>
+                            <span class="tag">TryHackMe</span>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/FarhanT17/SOC-L1-TryHackMe" target="_blank" rel="noopener noreferrer" class="btn btn-sm">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PhishGuard - Phishing Detection System -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>PhishGuard</h3>
+                            <div class="project-role">MSc Dissertation | ML Engineer</div>
+                        </div>
+                        <p class="project-description">Real-time phishing email detection system using DistilBERT transformer model with FastAPI backend and React Native mobile application.</p>
+                        
+                        <ul class="project-achievements">
+                            <li>Built ML pipeline with 95% recall to minimize false negatives</li>
+                            <li>Integrated model with FastAPI for real-time inference</li>
+                            <li>Designed user-friendly explanations for security awareness</li>
+                            <li>Deployed mobile app for instant phishing classification</li>
+                        </ul>
+                        
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">React Native</span>
+                            <span class="tag">DistilBERT</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/FarhanT17/PhishGuard" target="_blank" rel="noopener noreferrer" class="btn btn-sm">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- React Native E-commerce App -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>React Native E-commerce</h3>
+                            <div class="project-role">Mobile Developer</div>
+                        </div>
+                        <p class="project-description">Full-featured mobile e-commerce application with product listings, cart management, Redux state management, and Firebase integration.</p>
+                        
+                        <ul class="project-achievements">
+                            <li>Implemented secure authentication and API integration</li>
+                            <li>Redux for global state management</li>
+                            <li>Responsive UI with clean, modern design</li>
+                            <li>Scalable folder structure for maintainability</li>
+                        </ul>
+                        
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Redux</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Mobile Dev</span>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/FarhanT17/E-commerce-App" target="_blank" rel="noopener noreferrer" class="btn btn-sm">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Education & Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jan 2025 – Jan 2026</div>
+                        <h3>MSc Cyber Security</h3>
+                        <h4>Northumbria University, London | Distinction</h4>
+                        <p>Dissertation: Real-time phishing detection using DistilBERT. Focused on high recall to minimize false negatives. Research contribution to conference paper and book chapter.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Nov 2023 – Dec 2024</div>
+                        <h3>Mobile Application Developer</h3>
+                        <h4>Neosens IT Solutions</h4>
+                        <p>Developed production apps with secure API integration and authentication flows. Followed secure coding practices and incident-style bug resolution workflows.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Sep 2019 – Sep 2023</div>
+                        <h3>BSc Computer Science</h3>
+                        <h4>COMSATS University Islamabad | GPA 3.11/4.0</h4>
+                        <p>Final year project: Mehmaan Tourism System built with React Native and Firebase. Gained foundational programming and system design skills.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Mar 2024 – May 2024</div>
+                        <h3>WordPress Developer Intern</h3>
+                        <h4>GaoTek Inc</h4>
+                        <p>Managed access controls, user roles, and performed security checks. Gained experience in access management and vulnerability awareness.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Freelance Development Projects -->
+    <section id="freelance">
+        <div class="container">
+            <h2 class="section-title">Freelance Development Projects</h2>
+            <div class="freelance-section">
+                <div class="freelance-header">
+                    <h3><i class="fas fa-laptop-code"></i> Freelance Web & Mobile Developer</h3>
+                    <span class="freelance-date">Jan 2021 – Present</span>
+                </div>
+                <div class="freelance-sub">Self-employed · Remote</div>
+                
+                <ul class="freelance-achievements">
+                    <li>Delivered 15+ client-facing web and mobile applications with focus on security, reliability, and usability.</li>
+                    <li>Managed full project lifecycle: requirements gathering, development, testing, and successful delivery.</li>
+                    <li>Implemented secure authentication flows, API integration, and client-side data protection.</li>
+                    <li>Applied secure coding practices and performed security testing to minimize vulnerabilities.</li>
+                </ul>
+                
+                <div class="freelance-tags">
+                    <span class="tag">React Native</span>
+                    <span class="tag">Firebase</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">GitHub</span>
+                    <span class="tag">API Security</span>
+                    <span class="tag">Authentication</span>
+                    <span class="tag">Data Protection</span>
+                    <span class="tag">Secure Coding</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <h3>SOC Level 1</h3>
+                    <p><strong>TryHackMe</strong> <span class="cert-badge">65+ Labs</span></p>
+                    <p>Hands-on SOC analyst pathway with incident response, alert triage, SIEM analysis, and threat intelligence.</p>
+                </div>
+                
+                <div class="cert-card">
+                    <h3>CCNA</h3>
+                    <p><strong>Cisco</strong> <span class="cert-badge">In Progress</span></p>
+                    <p>Currently pursuing Cisco Certified Network Associate certification.</p>
+                </div>
+                
+                <div class="cert-card">
+                    <h3>Cybersecurity Analyst</h3>
+                    <p><strong>Tata Group via Forage</strong></p>
+                    <p>IAM assessment, incident analysis, and security solution design.</p>
+                </div>
+                
+                <div class="cert-card">
+                    <h3>Introduction to Network Security</h3>
+                    <p><strong>Coursera - University of London</strong></p>
+                    <p>Network security principles and practices.</p>
+                </div>
+                
+                <div class="cert-card">
+                    <h3>Foundations of Cybersecurity</h3>
+                    <p><strong>Coursera - Google</strong></p>
+                    <p>Core cybersecurity concepts and best practices.</p>
+                </div>
+                
+                <div class="cert-card">
+                    <h3>Foundations of Project Management</h3>
+                    <p><strong>Coursera - Google</strong></p>
+                    <p>Project management methodologies and tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Achievements & Awards</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <i class="fas fa-award"></i>
+                    <h3>EHSAAS Undergraduate Scholarship</h3>
+                    <p>Government of Pakistan (2019-2023)</p>
+                    <p>Full scholarship for undergraduate studies based on academic excellence.</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Prime Minister Youth Laptop</h3>
+                    <p>Government of Pakistan (2023)</p>
+                    <p>Awarded laptop under Prime Minister's Youth Program for academic achievement.</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Publications</h3>
+                    <ul class="publications-list">
+                        <li>
+                            <strong>Real-Time Email Phishing Detection Using Machine Learning</strong><br>
+                            <span>(Conference paper, Under Review)</span>
+                        </li>
+                        <li>
+                            <strong>Explainable Machine Learning for Real-Time Phishing Detection</strong><br>
+                            <span>(Conference paper, Under Review)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - WORKING FORM THAT SENDS EMAILS -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Seeking junior SOC Analyst or Cyber Security Analyst roles. Open to opportunities and collaboration.</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:Farhantariq5251@gmail.com">Farhantariq5251@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+447466024941">+44 7466024941</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div>
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/FarhanT17" target="_blank" rel="noopener noreferrer">github.com/FarhanT17</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h4>TryHackMe</h4>
+                            <a href="https://tryhackme.com/p/FarhanT17" target="_blank" rel="noopener noreferrer">tryhackme.com/p/FarhanT17</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <a href="https://linkedin.com/in/farhant17" target="_blank" rel="noopener noreferrer">linkedin.com/in/farhant17</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <!-- ✅ WORKING FORM - SENDS EMAILS TO YOUR INBOX -->
+                    <form action="https://formsubmit.co/Farhantariq5251@gmail.com" method="POST">
+                        <!-- Anti-spam honeypot (hidden) -->
+                        <input type="text" name="_honey" style="display:none">
+                        <!-- Disable captcha -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- Email subject line -->
+                        <input type="hidden" name="_subject" value="New Portfolio Message from Farhan Tariq's Website">
+                        <!-- Auto-response to sender (optional) -->
+                        <input type="hidden" name="_autoresponse" value="Thank you for reaching out! I received your message and will get back to you within 24-48 hours. - Farhan Tariq">
+                        
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Farhan Tariq</h3>
+                    <p>SOC-focused Cyber Security Analyst with 65+ hands-on SOC labs and a distinction-level MSc. Open to junior SOC and Cyber Security roles in the UK.</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/farhant17" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/FarhanT17" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://tryhackme.com/r/p/Farhantariq" target="_blank" rel="noopener noreferrer"><i class="fas fa-shield-alt"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#freelance">Freelance</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#achievements">Achievements</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> London, United Kingdom</p>
+                    <p><i class="fas fa-phone"></i> +44 7466024941</p>
+                    <p><i class="fas fa-envelope"></i> Farhantariq5251@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Farhan Tariq. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // ✅ FORM SUBMISSION CODE REMOVED - NOW WORKING WITH FORMSUBMIT
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>
